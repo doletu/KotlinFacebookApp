@@ -19,6 +19,8 @@
 * Facebook SDK 4.12.1
 * Android Studio 1.5
 * Android ver 4x,5x
+* Android SDK v3
+  - SDK v2系だと動作しないので注意
 
 ※上記内容で動作確認をしています。
 ※古いバージョンだと動作しない可能性があります。
