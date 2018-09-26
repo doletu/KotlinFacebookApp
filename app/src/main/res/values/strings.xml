@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">KotlinFacebookQuickstart</string>
     <string name="facebook_app_id">302*******347</string>
-    <string name="fb_login_protocol_scheme">fb302*********797</string>
     <string name="action_settings">Settings</string>
 </resources>
