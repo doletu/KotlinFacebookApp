@@ -42,9 +42,9 @@
 
 ![画像5](/readme-img/Screen5.png)
 
-### 2. [GitHub](https://github.com/NIFCloud-mbaas/KotlinFacebookApp.git)からサンプルプロジェクトのダウンロード
+### 2. [GitHub](https://github.com/NIFCLOUD-mbaas/KotlinFacebookApp.git)からサンプルプロジェクトのダウンロード
 
-* プロジェクトの[Githubページ](https://github.com/NIFCloud-mbaas/KotlinFacebookApp.git)から「Clone or download」＞「Download ZIP」をクリックします。
+* プロジェクトの[Githubページ](https://github.com/NIFCLOUD-mbaas/KotlinFacebookApp.git)から「Clone or download」＞「Download ZIP」をクリックします。
 * プロジェクトを解凍します。
 
 ### 3. AndroidStudioでアプリを起動
@@ -182,7 +182,7 @@ import com.nifcloud.mbaas.core.NCMBUser
                 object : FacebookCallback<LoginResult> {
                     override fun onSuccess(loginResult: LoginResult) {
 
-                        //Login to NIFCloud mobile backend
+                        //Login to NIFCLOUD mobile backend
                         val parameters = NCMBFacebookParameters(
                                 loginResult.accessToken.userId,
                                 loginResult.accessToken.token,
@@ -190,7 +190,7 @@ import com.nifcloud.mbaas.core.NCMBUser
                         )
                         try {
                             NCMBUser.loginWith(parameters)
-                            Toast.makeText(applicationContext, "Login to NIFCloud mbaas with Facebook account", Toast.LENGTH_LONG).show()
+                            Toast.makeText(applicationContext, "Login to NIFCLOUD mbaas with Facebook account", Toast.LENGTH_LONG).show()
                         } catch (e: NCMBException) {
                             e.printStackTrace()
                         }
