@@ -1,10 +1,10 @@
-# 【Android】アプリにFacebookログイン機能をつけよう！
+# 【Android】アプリにFacebookログイン機能をつけよう！for Kotlin
 ![画像1](/readme-img/Screen1.png)
 
 ## 概要
 * [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の『SNS連携（Facebook連携）』を利用して、Facebookのログイン機能を実装したサンプルプロジェクトです。
 * Facebook連携で取得した会員データは[ニフクラ mobile backend](https://mbaas.nifcloud.com/)の『会員管理機能』として扱うことができます。
- * [【Android】アプリのログイン機能](https://github.com/ncmbadmin/android_login_demo)も用意していますので、参照ください。
+ * [【Android】アプリのログイン機能](https://github.com/NIFCloud-mbaas/KotlinLoginApp)も用意していますので、参照ください。
 * このコンテンツは簡単な操作ですぐに [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の機能を体験いただけます。
 
 ## ニフクラ mobile backendについて
@@ -27,7 +27,7 @@
 
 
 ## 手順
-### 1. [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の会員登録とアプリ作成
+### 1. [ニフクラ mobile backend](https://mbaas.nifcloud.com/signup.htm)の会員登録とアプリ作成
 
 * 上記リンクから会員登録（無料）をします。登録ができたらログインをすると下図のように「アプリの新規作成」画面が出るのでアプリを作成します。
 
@@ -55,7 +55,10 @@
 
 ### 4. APIキーの設定
 
-* `MainActivity.kt`を編集します。
+* AndroidStudioで `MainActivity.kt` を開きます。
+   * ディレクトリはデフォルトで「Android」が選択されていますので、「Project」に切り替えてから探してください。
+![画像8](/readme-img/project.png)
+
 * 先程[ニフクラ mobile backend](https://mbaas.nifcloud.com/)のダッシュボード上で確認したAPIキーを貼り付けます。
 
 ![画像07](/readme-img/Screen7.png)
@@ -131,7 +134,7 @@
 * Facebookログインの画面（ブラウザ）が表示されるので、必要事項を入力し、ログインを行います。
 * ログインに成功したらログアウトします。
 
-![画像16](/readme-img/Screen16.png)
+![画像16](/readme-img/Screen16.PNG)
 
 -----
 
