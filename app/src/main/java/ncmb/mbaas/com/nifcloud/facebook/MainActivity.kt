@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 object : FacebookCallback<LoginResult> {
                     override fun onSuccess(loginResult: LoginResult) {
 
-                        //Login to NIFCloud mobile backend
+                        //Login to NIFCLOUD mobile backend
                         val parameters = NCMBFacebookParameters(
                                 loginResult.accessToken.userId,
                                 loginResult.accessToken.token,
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                         )
                         try {
                             NCMBUser.loginWith(parameters)
-                            Toast.makeText(applicationContext, "Login to NIFCloud mbaas with Facebook account", Toast.LENGTH_LONG).show()
+                            Toast.makeText(applicationContext, "Login to NIFCLOUD mbaas with Facebook account", Toast.LENGTH_LONG).show()
                         } catch (e: NCMBException) {
                             e.printStackTrace()
                         }
