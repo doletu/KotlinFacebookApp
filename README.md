@@ -41,9 +41,9 @@
 
 ![画像5](/readme-img/Screen5.png)
 
-### 2. [GitHub](https://github.com/NIFCLOUD-mbaas/KotlinFacebookApp.git)からサンプルプロジェクトのダウンロード
+### 2. [GitHub](https://github.com/NIFCloud-mbaas/KotlinFacebookApp.git)からサンプルプロジェクトのダウンロード
 
-* プロジェクトの[Githubページ](https://github.com/NIFCLOUD-mbaas/KotlinFacebookApp.git)から「Clone or download」＞「Download ZIP」をクリックします。
+* プロジェクトの[Githubページ](https://github.com/NIFCloud-mbaas/KotlinFacebookApp.git)から「Clone or download」＞「Download ZIP」をクリックします。
 * プロジェクトを解凍します。
 
 ### 3. AndroidStudioでアプリを起動
