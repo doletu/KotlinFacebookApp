@@ -50,7 +50,7 @@
 
 * AndroidStudioを開き、解凍したプロジェクトを選択します。
 
-![画像6](/readme-img/Screen6.png)
+![画像6](/readme-img/android_studio.png)
 
 ### 4. APIキーの設定
 
