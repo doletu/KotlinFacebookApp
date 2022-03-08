@@ -12,6 +12,7 @@ import androidx.test.espresso.ViewInteraction
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -71,49 +72,48 @@ class ExecuteUITest {
         // Login Activity
         btnLogin!!.perform(ViewActions.click())
 
-        // Facebook WebView - Page 1
         mDevice.wait(Until.findObject(By.clazz(WebView::class.java)), timeOut.toLong())
 
-        // Set Login
-        val emailInput = mDevice.findObject(
-            UiSelector()
-                .instance(0)
-                .className(EditText::class.java)
-        )
-        emailInput.waitForExists(timeOut.toLong())
-        emailInput.text = FB_EMAIL
+       if(TextHelpers.getText(btnLogin).equals("Log out", ignoreCase = true)){
+            btnLogin!!.check(ViewAssertions.matches(ViewMatchers.withText("Log out")))
+       }else{
+           // Set Login
+           val emailInput = mDevice.findObject(
+               UiSelector()
+                   .instance(0)
+                   .text("Phone or email")
+           )
+           emailInput.waitForExists(timeOut.toLong())
+           emailInput.text = FB_EMAIL
 
-        // Set Password
-        val passwordInput = mDevice.findObject(
-            UiSelector()
-                .instance(1)
-                .className(EditText::class.java)
-        )
-        passwordInput.waitForExists(timeOut.toLong())
-        passwordInput.text = FB_PASS
+           // Set Password
+           val passwordInput = mDevice.findObject(
+               UiSelector()
+                   .instance(0)
+                   .className(EditText::class.java).textContains("Password")
+           )
+           passwordInput.waitForExists(timeOut.toLong())
+           passwordInput.text = FB_PASS
 
-        // Confirm Button Click
-        val buttonLogin = mDevice.findObject(
-            UiSelector()
-                .instance(0)
-                .className(Button::class.java)
-        )
-        buttonLogin.waitForExists(timeOut.toLong())
-        buttonLogin.clickAndWaitForNewWindow()
+           // Confirm Button Click
+           val buttonLogin = mDevice.findObject(
+               UiSelector()
+                   .instance(0)
+                   .descriptionContains("Log In")
+           )
+           buttonLogin.waitForExists(timeOut.toLong())
+           buttonLogin.clickAndWaitForNewWindow()
 
-        // Facebook WebView - Page 2
-        val buttonOk = mDevice.findObject(
-            UiSelector()
-                .instance(0)
-                .className(Button::class.java)
-        )
-        buttonOk.waitForExists(timeOut.toLong())
-        buttonOk.click()
 
-        // should be properly synchronised with Espresso via IdlingResource,
-        // ConditionWatcher or any similar waiting solution
-        Thread.sleep(15000)
-        btnLogin!!.check(ViewAssertions.matches(ViewMatchers.withText("Log out")))
+
+           // should be properly synchronised with Espresso via IdlingResource,
+           // ConditionWatcher or any similar waiting solution
+           Thread.sleep(15000)
+           btnLogin!!.check(ViewAssertions.matches(ViewMatchers.withText("Log out")))
+       }
+
+
+
     }
 
     private object TextHelpers {
